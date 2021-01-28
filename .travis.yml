@@ -3,7 +3,7 @@ language: node_js
 # dist: bionic
 # arch: arm64-graviton2
 node_js:
-  - 14
+  - 12
 
 # addons:
 #     chrome: stable
