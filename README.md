@@ -55,8 +55,8 @@ It is Mandatory to provide the `results` to the retry.onCleanUp function
 
 #### Step 4: afterLaunch ( Your Protractor Config )
  ```js
-afterLaunch = function() {
-    return retry.afterLaunch(NUMBER_OF_RETRIES);
+afterLaunch = function(statusCode) {
+    return retry.afterLaunch(NUMBER_OF_RETRIES, statusCode);
 }
 ```
 It is Mandatory to use `return` here
@@ -71,8 +71,8 @@ exports.config = {
     onPrepare: function () {
         retry.onPrepare();
     },
-    afterLaunch: function() {
-        return retry.afterLaunch(2);
+    afterLaunch: function(statusCode) {
+        return retry.afterLaunch(2, statusCode);
     }
 };
 ```
