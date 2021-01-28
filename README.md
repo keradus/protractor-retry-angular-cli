@@ -3,7 +3,7 @@
 
 ## protractor-retry-angular-cli
 
- * A solution to address the **flakyness** of your Protractor FE automation test suites.  
+ * A solution to address the **flakyness** of your Protractor FE automation test suites.
  * This module used protractor features to automatically re-run failed tests with a specific configurable number of attempts.
  * This module is added in our CICD pipelines  where we have a zero failure policy in order to bless an environment.
  * Mocha & Jasmine are supported.
@@ -55,8 +55,8 @@ It is Mandatory to provide the `results` to the retry.onCleanUp function
 
 #### Step 4: afterLaunch ( Your Protractor Config )
  ```js
-afterLaunch = function() {
-    return retry.afterLaunch(NUMBER_OF_RETRIES);
+afterLaunch = function(statusCode) {
+    return retry.afterLaunch(NUMBER_OF_RETRIES, statusCode);
 }
 ```
 It is Mandatory to use `return` here
@@ -71,8 +71,8 @@ exports.config = {
     onPrepare: function () {
         retry.onPrepare();
     },
-    afterLaunch: function() {
-        return retry.afterLaunch(2);
+    afterLaunch: function(statusCode) {
+        return retry.afterLaunch(2, statusCode);
     }
 };
 ```
@@ -87,6 +87,6 @@ Those 3 examples are actually used for the functional tests coverage of this pac
 
 ### Known Caveat
 * If you are NOT Running in Parallel mode, the package will retry the whole testsuite if any failure.
-* **Windows** as an environment to launch & use this package is unfortunately not yet supported. 
+* **Windows** as an environment to launch & use this package is unfortunately not yet supported.
 * **WINDOWS SUPPORT UPDATE** Supported from version 2.0.1
 

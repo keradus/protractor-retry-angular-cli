@@ -8,9 +8,12 @@
     "url": "https://github.com/eromano/protractor-retry-angular-cli"
   },
   "scripts": {
+		"postinstall": "webdriver-manager update --gecko=true",
     "lint": "eslint .",
     "release": "standard-version",
-    "test": "protractor test/protractor.mocha.conf.js;echo '######### MOCHA DONE ########';protractor test/protractor.jasmine.conf.js;echo '######### JASMINE DONE ########';DEBUG=ProtractorRetry protractor test/protractor.suite.conf.js --suite=mochasuite"
+    "test:mocha": "protractor test/protractor.mocha.conf.js",
+    "test:jasmine": "protractor test/protractor.jasmine.conf.js",
+    "test:suite": "DEBUG=ProtractorRetry protractor test/protractor.suite.conf.js --suite=mochasuite"
   },
   "author": "Amro Tahtamouni",
   "contributors": [
@@ -25,6 +28,10 @@
     {
       "name": "Eugenio Romano",
       "email": "eugenioromanodeveloper@gmail.com"
+    },
+    {
+      "name": "Andras Popovics",
+      "email": "popovics@ndras.hu"
     }
   ],
   "license": "MIT",
