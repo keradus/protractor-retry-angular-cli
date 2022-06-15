@@ -2,20 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.2.14](https://github.com/yahoo/Protractor-retry/compare/v1.2.13...v1.2.14) (2020-12-04)
-
-### [1.2.13](https://github.com/yahoo/Protractor-retry/compare/v1.2.12...v1.2.13) (2020-08-14)
-
-### [1.2.12](https://github.com/yahoo/Protractor-retry/compare/v1.2.11...v1.2.12) (2020-03-25)
-
-### [1.2.11](https://github.com/yahoo/Protractor-retry/compare/v1.2.10...v1.2.11) (2020-03-10)
-
-
-
-### [1.2.10](https://github.com/yahoo/Protractor-retry/compare/v1.2.9...v1.2.10) (2020-03-09)
-
-
-
 ### [1.2.9](https://github.com/yahoo/Protractor-retry/compare/v1.2.8...v1.2.9) (2019-07-01)
 
 
